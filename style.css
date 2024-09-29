@@ -1,0 +1,91 @@
+body {
+    font-family: Arial, sans-serif;
+   
+    margin: 0;
+    padding: 20px;
+    color: black;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+h1, h2 {
+    text-align: center;
+    color: black;
+}
+
+.input-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+label {
+    margin-top: 10px;
+    color: black;
+}
+
+input, button {
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px 0;
+    border: none;
+    width: 600px;
+    text-align: center;
+    background-color: #f4f4f9;
+    color: black;
+}
+
+input:focus {
+    outline: none;
+    background-color: #d0d0d0;
+}
+
+button {
+    margin-top: 20px;
+    background-color: black;
+    width: 620px;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #333;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: black;
+    color: white;
+}
+
+td {
+    background-color: white;
+    color: black;
+}
+
+canvas {
+    display: block;
+    margin: 0 auto;
+    width: 800px; /* Increased width */
+    height: 400px; /* Increased height */
+    max-width: 100%; /* Make it responsive */
+}
+
+p {
+    text-align: center;
+    font-weight: bold;
+}
