@@ -1,54 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chi-Square Test for Uniformity</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="container">
-        <h1>Chi-Square Test for Uniformity</h1>
-
-        <div class="input-section">
-            <label for="upperLimits">Upper Limits (comma separated):</label>
-            <input type="text" id="upperLimits" placeholder="e.g. 0.1, 0.2, 0.3">
-            
-            <label for="observedFreqs">Observed Frequencies (comma separated):</label>
-            <input type="text" id="observedFreqs" placeholder="e.g. 8, 10, 11">
-
-            <label for="expectedFreqs">Expected Frequencies (comma separated):</label>
-            <input type="text" id="expectedFreqs" placeholder="e.g. 10, 10, 10">
-
-            <label for="alpha">Alpha Value:</label>
-            <input type="number" id="alpha" step="0.01" placeholder="e.g. 0.05">
-
-            <button id="calculateBtn">Calculate</button>
-        </div>
-
-        <table id="chi-square-table">
-            <thead>
-                <tr>
-                    <th>Interval</th>
-                    <th>Upper Limit</th>
-                    <th>Observed Frequency</th>
-                    <th>Expected Frequency</th>
-                    <th>Chi-Square Contribution</th>
-                </tr>
-            </thead>
-            <tbody id="table-body">
-                <!-- Dynamic rows will be added here -->
-            </tbody>
-        </table>
-
-        <h2>Results</h2>
-        <p id="chi-square-result"></p>
-        <p id="final-decision"></p>
-
-        <canvas id="barChart"></canvas>
-    </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jstat/1.9.6/jstat.min.js" integrity="sha512-UK8MjH09aePxFAd8OwI5P4oP462OBBNGVh3OtnuHjybd0T3ArUbAseIuHpS1XfinmMXcCZG5barC+7SNPjuQtg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chi-Square Test</title>
+    <link rel="stylesheet" href="style.css" />
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jstat/1.9.4/jstat.min.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+
+  </head>
+  <body>
+    <h1>Chi-Square Test Calculator</h1>
+
+    <div class="container">
+      <label for="upperLimits">Upper Limits (comma-separated):</label>
+      <input type="text" id="upperLimits" placeholder="e.g., 5,10,15" />
+
+      <label for="observedFreqs">Observed Frequencies (comma-separated):</label>
+      <input type="text" id="observedFreqs" placeholder="e.g., 10,15,20" />
+
+      <label for="expectedFreqs">Expected Frequencies (comma-separated):</label>
+      <input type="text" id="expectedFreqs" placeholder="e.g., 12,18,22" />
+
+      <label for="alpha">Significance Level (alpha):</label>
+      <input type="number" id="alpha" placeholder="e.g., 0.05" />
+
+      <button id="calculateBtn">Calculate Chi-Square</button>
+
+    
+      <table>
+        <thead>
+          <tr>
+            <th>Interval</th>
+            <th>Upper Limit</th>
+            <th>Observed Frequency</th>
+            <th>Expected Frequency</th>
+            <th>Chi-Square Contribution</th>
+          </tr>
+        </thead>
+        <tbody id="table-body"></tbody>
+      </table>
+
+      <canvas id="barChart" width="400" height="200"></canvas>
+
+      
+    <h2>Chi-Square Results</h2>
+    <p id="chi-square-result"></p>
+    <p id="final-decision"></p>
+
+
+    </div>
+
+
+
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
