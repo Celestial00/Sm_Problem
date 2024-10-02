@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded', function () {
         chiSquareResult.textContent = `Chi-Square Statistic: χ² = ${totalChiSquare.toFixed(2)}`;
 
         const decision = totalChiSquare < criticalValue
-            ? 'Fail to reject the null hypothesis (Uniform distribution).'
+            ? 'Accept the null hypothesis (Uniform distribution).'
             : 'Reject the null hypothesis (Non-uniform distribution).';
 
         finalDecision.textContent = `Conclusion: ${decision}`;
